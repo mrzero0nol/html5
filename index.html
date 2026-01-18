@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Deploy VPS - Berhasil</title>
+    <style>
+        :root {
+            --primary-color: #10b981; /* Hijau Sukses */
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: #d1fae5;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .status-box {
+            background-color: #f9fafb;
+            border: 1px dashed #d1d5db;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .status-active {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+        </div>
+
+        <h1>Deployment Berhasil!</h1>
+        <p>Jika Anda melihat halaman ini, berarti konfigurasi Web Server (Nginx/Apache) pada VPS Anda sudah benar dan dapat diakses dari internet.</p>
+
+        <div class="status-box">
+            Status: <span class="status-active">● RUNNING</span><br>
+            <span id="loadTime">Memuat waktu...</span>
+        </div>
+
+        <footer>
+            Halaman ini adalah file index.html default.<br>
+            Silakan ganti dengan file website Anda.
+        </footer>
+    </div>
+
+    <script>
+        // Script sederhana untuk menampilkan waktu akses
+        const date = new Date();
+        document.getElementById('loadTime').innerText = "Last Access: " + date.toLocaleString();
+    </script>
+
+</body>
+</html>
